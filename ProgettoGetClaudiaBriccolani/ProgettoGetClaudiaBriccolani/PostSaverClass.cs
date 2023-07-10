@@ -18,7 +18,7 @@ namespace ProgettoGetClaudiaBriccolani
                 var response = await client.GetAsync("https://jsonplaceholder.typicode.com/posts");
                 if (response.IsSuccessStatusCode)
                 {
-                    PostModel postReceiver = new PostModel(); 
+                    
                     var json = await response.Content.ReadAsStringAsync();
                     var posts = JsonSerializer.Deserialize<List<PostModel>>(json);
 
